@@ -1,14 +1,453 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="cs">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Vavrečka | Senior PPC Specialista & Webový Analytik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-white text-gray-800 selection:bg-blue-100 selection:text-blue-900">
+
+    <!-- Navigace -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600 tracking-tight">Jan Vavrečka</a>
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition">Služby</a>
+                <a href="#for-whom" class="text-gray-600 hover:text-blue-600 transition">Pro koho</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition">Reference</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition">O mně</a>
+                <a href="#contact" class="bg-blue-600 text-white py-2.5 px-5 rounded-lg cta-button shadow-lg shadow-blue-600/20">Nezávazná konzultace</a>
+            </div>
+            <button class="md:hidden text-gray-600 hover:text-blue-600 transition" id="mobile-menu-button">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+         <!-- Mobilní menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#services" class="block text-lg text-gray-600 hover:text-blue-600 transition py-2">Služby</a>
+            <a href="#for-whom" class="block text-lg text-gray-600 hover:text-blue-600 transition py-2">Pro koho</a>
+            <a href="#testimonials" class="block text-lg text-gray-600 hover:text-blue-600 transition py-2">Reference</a>
+            <a href="#about" class="block text-lg text-gray-600 hover:text-blue-600 transition py-2">O mně</a>
+            <a href="#contact" class="block bg-blue-600 text-white font-medium py-3 px-5 rounded-lg text-center mt-4">Nezávazná konzultace</a>
+        </div>
+    </nav>
+
+    <!-- 1. Hlavní sekce (Hero) -->
+    <header class="gradient-bg relative overflow-hidden">
+        <!-- Dekorativní prvek -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+        
+        <div class="container mx-auto px-6 py-24 md:py-32 text-center relative z-10">
+            <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-6">PPC • Analytika • Strategie</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
+                Přetavím kliknutí na zisk <br class="hidden md:block"> a data na jasnou strategii.
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Jako seniorní PPC specialista a webový analytik vám pomohu nejen spravovat kampaně, ale i strategicky plánovat a dosahovat skutečných obchodních cílů.
+            </p>
+            <div class="mt-10 flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 text-white font-bold py-4 px-8 rounded-lg cta-button text-lg shadow-xl shadow-blue-600/20">
+                    Chci strategickou konzultaci
+                </a>
+                <a href="#services" class="bg-white text-gray-700 font-bold py-4 px-8 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition text-lg">
+                    Zjistit více o službách
+                </a>
+            </div>
+            <p class="mt-6 text-sm text-gray-500 flex justify-center items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-green-500"></i> První audit potenciálu zdarma
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Sekce služeb -->
+        <section id="services" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Moje specializace</h2>
+                    <p class="text-lg text-gray-600">Komplexní služby pro váš úspěch v digitálním světě. Od nastavení kampaní po hloubkovou analýzu.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Služba PPC -->
+                    <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm service-card flex flex-col h-full">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="mouse-pointer-click" class="text-blue-600 w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Pokročilé PPC kampaně</h3>
+                        <p class="text-gray-600 mb-6 min-h-[4rem]">Nastavení a správa pokročilých kampaní s důrazem na maximální výkon a efektivitu.</p>
+                        <ul class="space-y-3 text-gray-700 mt-auto">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Google Ads, Sklik, Microsoft Ads</li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>LinkedIn Ads & Meta Ads</li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Správa XML feedů v Mergadu</li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Scripting a automatizace</li>
+                        </ul>
+                    </div>
+
+                    <!-- Služba Analytika -->
+                    <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm service-card flex flex-col h-full">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="bar-chart-3" class="text-blue-600 w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Webová analytika</h3>
+                        <p class="text-gray-600 mb-6 min-h-[4rem]">Přeměna dat na konkrétní doporučení pro zlepšení uživatelského zážitku a konverzí.</p>
+                        <ul class="space-y-3 text-gray-700 mt-auto">
+                             <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Implementace GTM a GA4</li>
+                             <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Pokročilá segmentace dat</li>
+                             <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Reporty v Looker (Data) Studiu</li>
+                             <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>UX analýzy (Microsoft Clarity)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Služba Strategie -->
+                     <div class="bg-white border border-gray-100 p-8 rounded-2xl shadow-sm service-card flex flex-col h-full">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="brain-circuit" class="text-blue-600 w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Strategie & Development</h3>
+                        <p class="text-gray-600 mb-6 min-h-[4rem]">Plánování a podpora vašeho byznysu na základě dat, analýz a dlouhodobých cílů.</p>
+                        <ul class="space-y-3 text-gray-700 mt-auto">
+                             <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Tvorba prognóz a plánování</li>
+                             <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Analýza konkurence a trhu</li>
+                             <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Marketingové audity</li>
+                             <li class="flex items-start"><i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600 mr-3 mt-0.5 shrink-0"></i>Business development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce Benefitů -->
+        <section class="py-20 bg-gray-50 border-y border-gray-200">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="text-center">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-md mb-6 text-blue-600">
+                            <i data-lucide="trending-up" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Měřitelný růst</h3>
+                        <p class="text-gray-600 leading-relaxed">Optimalizuji investice tak, aby každá koruna přinesla maximální a prokazatelný zisk.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-md mb-6 text-blue-600">
+                            <i data-lucide="compass" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Strategické vedení</h3>
+                        <p class="text-gray-600 leading-relaxed">Získáte jasný směr a plán postavený na analýze trhu, konkurence a vašich cílech.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-md mb-6 text-blue-600">
+                            <i data-lucide="database" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-lg font-bold mb-2">Datová jistota</h3>
+                        <p class="text-gray-600 leading-relaxed">Veškerá rozhodnutí jsou podložena pokročilou analytikou. Žádné dohady, jen fakta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nová sekce: Pro koho -->
+        <section id="for-whom" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-16">
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Pro koho je spolupráce ideální?</h2>
+                        <p class="text-lg text-gray-600 mb-8">Pomáhám firmám, které chtějí růst chytře a efektivně. Vždy se snažím vytvořit reklamu a strategii <span class="font-bold text-blue-600">maximálně na míru</span> vašim cílům a rozpočtu.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="bg-blue-100 p-3 h-fit rounded-lg">
+                                    <i data-lucide="shopping-cart" class="text-blue-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">Malé a střední e-shopy</h3>
+                                    <p class="text-gray-600 mt-2">Ať už jste na úplném začátku a potřebujete nastavit strategii od nuly, nebo máte rozběhnutý byznys a hledáte cesty k dalšímu škálování.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="bg-blue-100 p-3 h-fit rounded-lg">
+                                    <i data-lucide="briefcase" class="text-blue-600 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900">Firmy nabízející služby</h3>
+                                    <p class="text-gray-600 mt-2">Zaměřuji se také na segment služeb. Mým cílem je přivést vám relevantní poptávky a pomoci vám stát se lídrem ve vašem oboru.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 relative">
+                        <!-- Abstraktní grafika -->
+                        <div class="absolute top-4 right-4 opacity-10">
+                            <i data-lucide="bar-chart-2" class="w-32 h-32"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-6">Můj přístup</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                                <i data-lucide="check" class="text-green-500 w-5 h-5 mr-3"></i>
+                                <span class="font-medium">Žádná univerzální řešení</span>
+                            </li>
+                            <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                                <i data-lucide="check" class="text-green-500 w-5 h-5 mr-3"></i>
+                                <span class="font-medium">Strategie šitá na míru</span>
+                            </li>
+                            <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                                <i data-lucide="check" class="text-green-500 w-5 h-5 mr-3"></i>
+                                <span class="font-medium">Osobní přístup a komunikace</span>
+                            </li>
+                            <li class="flex items-center bg-white p-4 rounded-lg shadow-sm">
+                                <i data-lucide="check" class="text-green-500 w-5 h-5 mr-3"></i>
+                                <span class="font-medium">Dlouhodobé partnerství</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Zákaznické recenze -->
+        <section id="testimonials" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Spokojení klienti</h2>
+                    <p class="mt-4 text-lg text-gray-600">Výsledky mluví za vše.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 relative">
+                        <i data-lucide="quote" class="absolute top-8 right-8 w-8 h-8 text-gray-200"></i>
+                        <p class="text-gray-600 italic text-lg mb-8 relative z-10">"Spolupráce s Honzou byla naprosto klíčová pro náš růst. Díky jeho expertíze jsme zvýšili počet objednávek o 150 % a zároveň snížili náklady na konverzi o 30 %. Jeho strategický pohled nám otevřel nové možnosti."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold mr-4">PK</div>
+                            <div>
+                                <p class="font-bold text-gray-900">Petr Kříž</p>
+                                <p class="text-sm text-gray-500">Majitel e-shopu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 relative">
+                         <i data-lucide="quote" class="absolute top-8 right-8 w-8 h-8 text-gray-200"></i>
+                        <p class="text-gray-600 italic text-lg mb-8 relative z-10">"Konečně máme v datech pořádek a jasné reporty v Looker Studiu. Honza nám perfektně nastavil GA4 a GTM. Teď přesně víme, odkud nám chodí zákazníci a jak se chovají na webu."</p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold mr-4">LS</div>
+                            <div>
+                                <p class="font-bold text-gray-900">Lenka Sladká</p>
+                                <p class="text-sm text-gray-500">Marketingová manažerka</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. O nás -->
+        <section id="about" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 max-w-5xl mx-auto">
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-blue-600 rounded-full blur-2xl opacity-20"></div>
+                            <img src="https://placehold.co/300x300/E2E8F0/4A5568?text=JV" alt="Jan Vavrečka" class="w-64 h-64 rounded-full object-cover shadow-2xl relative z-10 border-4 border-white">
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Jan Vavrečka</h2>
+                        <p class="text-xl text-blue-600 font-medium mb-6">Seniorní PPC Specialista & Webový Analytik</p>
+                        <div class="prose text-gray-600 leading-relaxed text-lg">
+                            <p class="mb-4">
+                                S více než 4 lety zkušeností v digitálním marketingu se zaměřuji na strategický rozvoj klientů. Mým cílem není jen spravovat PPC kampaně, ale aktivně hledat příležitosti pro váš růst, analyzovat trh a tvořit prognózy.
+                            </p>
+                            <p>
+                                Rád předávám své zkušenosti dál, a to nejen na oborových konferencích a workshopech. Mám přesah i do dalších oblastí online marketingu, což mi umožňuje vidět celek a přinášet komplexní řešení.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-8 pt-8 border-t border-gray-100 flex flex-wrap justify-center md:justify-start gap-8 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                             <!-- Loga partnerů/certifikací (textové placeholdery pro čistotu kódu) -->
+                             <span class="font-bold text-gray-400 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5"></i> Google Partner</span>
+                             <span class="font-bold text-gray-400 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5"></i> Google Analytics</span>
+                             <span class="font-bold text-gray-400 flex items-center gap-2"><i data-lucide="award" class="w-5 h-5"></i> Sklik Certifikace</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Lead generation sekce (Kontakt) -->
+        <section id="contact" class="py-24 bg-gray-900 text-white relative overflow-hidden">
+             <div class="absolute inset-0 bg-blue-600 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                 <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6">Připraveni na růst?</h2>
+                            <p class="text-gray-300 text-lg mb-8">Pojďme se nezávazně pobavit o tom, jak mohu pomoci vašemu byznysu. Vyplňte formulář a já se vám co nejdříve ozvu.</p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center text-gray-300">
+                                    <div class="bg-gray-800 p-2 rounded-lg mr-4">
+                                        <i data-lucide="bar-chart" class="w-6 h-6 text-blue-400"></i>
+                                    </div>
+                                    <span>Nezávazný audit vašich aktivit</span>
+                                </div>
+                                <div class="flex items-center text-gray-300">
+                                    <div class="bg-gray-800 p-2 rounded-lg mr-4">
+                                        <i data-lucide="lightbulb" class="w-6 h-6 text-blue-400"></i>
+                                    </div>
+                                    <span>Návrhy strategického zlepšení</span>
+                                </div>
+                                <div class="flex items-center text-gray-300">
+                                    <div class="bg-gray-800 p-2 rounded-lg mr-4">
+                                        <i data-lucide="coffee" class="w-6 h-6 text-blue-400"></i>
+                                    </div>
+                                    <span>Příjemný rozhovor bez nátlaku</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl p-8 shadow-2xl text-gray-800">
+                            <h3 class="text-2xl font-bold mb-6">Napište mi</h3>
+                            <form class="space-y-5" id="contact-form">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Jméno</label>
+                                    <input type="text" id="name" name="Jméno" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-gray-50" placeholder="Jan Novák" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                                    <input type="email" id="email" name="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-gray-50" placeholder="jan@firma.cz" required>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Zpráva</label>
+                                    <textarea id="message" name="Zpráva" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-gray-50" placeholder="S čím potřebujete pomoci?"></textarea>
+                                </div>
+                                <button type="submit" id="submit-button" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 shadow-lg flex justify-center items-center gap-2">
+                                    <span>Odeslat poptávku</span>
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                </button>
+                            </form>
+                            <div id="form-success-message" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-lg text-center border border-green-100">
+                                <i data-lucide="check-circle" class="w-8 h-8 mx-auto mb-2 text-green-500"></i>
+                                <p class="font-bold">Děkuji za zprávu!</p>
+                                <p class="text-sm">Brzy se vám ozvu zpět.</p>
+                            </div>
+                             <div id="form-error-message" class="hidden mt-6 p-4 bg-red-50 text-red-700 rounded-lg text-center border border-red-100">
+                                <p class="font-bold">Něco se pokazilo.</p>
+                                <p class="text-sm">Zkuste to prosím znovu nebo mi napište e-mail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- 7. Patička -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold text-white">Jan Vavrečka</h3>
+                    <p class="text-sm mt-1">Senior PPC specialista & Webový analytik</p>
+                </div>
+                <div class="flex gap-6">
+                     <a href="mailto:jan.vavrecka@priklad.cz" class="hover:text-white transition flex items-center gap-2">
+                        <i data-lucide="mail" class="w-5 h-5"></i> jan.vavrecka@priklad.cz
+                     </a>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-blue-600 hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-blue-400 hover:text-white transition"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-600">
+                <p>&copy; 2025 Jan Vavrečka. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobilní menu logic
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // --- FORMULÁŘ & GOOGLE SHEETS LOGIKA ---
+        const form = document.getElementById('contact-form');
+        const submitButton = document.getElementById('submit-button');
+        const submitButtonText = submitButton.querySelector('span');
+        const successMessage = document.getElementById('form-success-message');
+        const errorMessage = document.getElementById('form-error-message');
+        
+        // !!! ZDE VLOŽTE URL VAŠEHO NASAZENÉHO GOOGLE APPS SKRIPTU !!!
+        const scriptURL = 'SEM_VLOZTE_URL_VASEHO_SKRIPTU';
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // UI stav: Odesílání
+            submitButton.disabled = true;
+            submitButtonText.textContent = 'Odesílám...';
+            submitButton.classList.add('opacity-75', 'cursor-not-allowed');
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    // Úspěch
+                    console.log('Success!', response);
+                    form.reset();
+                    form.classList.add('hidden'); // Skryje formulář
+                    successMessage.classList.remove('hidden'); // Ukáže úspěšnou hlášku
+                })
+                .catch(error => {
+                    // Chyba
+                    console.error('Error!', error.message);
+                    errorMessage.classList.remove('hidden');
+                    submitButton.disabled = false;
+                    submitButtonText.textContent = 'Odeslat poptávku';
+                    submitButton.classList.remove('opacity-75', 'cursor-not-allowed');
+                });
+        });
+    </script>
 </body>
 </html>
